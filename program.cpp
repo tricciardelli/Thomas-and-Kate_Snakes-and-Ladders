@@ -7,8 +7,12 @@ using namespace std;
 
 void board();//initialize function to draw the board
 
-int check_progress();//initialize function to check game progress
-
+int check_progress();
+{
+	player = roll + progess;
+	computer = computer_roll + progress;
+return 0;
+}
 int roll_dice();//initialize function to roll dice
 
 
@@ -27,7 +31,6 @@ int computer = 0;
 
 int squares[100]; // for the 100 squares, computers right counts from 0
 
-
 int main() //this is where it all goes down in c++, it's like the canvas for da vinci...
 {
     srand( time(NULL) ); //we need random numbers remeber?
@@ -40,7 +43,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
 
     for ( int i = 1; i <= 100; i++) // this loop just makes it possible for us to give our squares values
         {
-            //fill
+            //
         }
 
     do 
@@ -52,7 +55,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
 
         if( (roll + player) > 100)
         {
-            //fill      player has rolled a number that exceeds the end point player remains where they are
+            player = player - roll;
         }
         else
         {
@@ -64,7 +67,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
 
         if( (computer_roll + computer) > 100)
         {
-            //fill.   computer has rolled a number that exceeds the end point, computer remains where it is
+            computer = computer - computer_roll;
         }
         else
         {

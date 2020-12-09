@@ -262,20 +262,20 @@ int roll_dice()//define the dice rolling mechanism
 {
    srand(time(NULL));
 
-    int num;
+    int number;
     
-    cout << "How many times do you want to roll the dice? ";
-    cin >> num;
+    cout<<"How many times do you want to roll? ";
+    cin>>number;
     
-    dice(num);
-    cout << endl;
+    dice(number);
+    cout<<endl;
     return 0;
 }
 
 void dice(int nr)
 {
     for( int i=1; i<=nr; i++)
-        cout << (rand() % 6 + 1) <<endl;
+        cout<<(rand() % 6 + 1) <<endl;
 }
 }
 

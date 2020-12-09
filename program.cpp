@@ -256,9 +256,27 @@ void board()
     cout << "----------------------------------------------------------------------------"<<endl;
 }
 
+void dice(int nr);
+
 int roll_dice()//define the dice rolling mechanism
 {
-   //fill
+   srand(time(NULL));
+
+    int num;
+    
+    cout << "How many times do you want to roll the dice? ";
+    cin >> num;
+    
+    dice(num);
+    cout << endl;
+    return 0;
+}
+
+void dice(int nr)
+{
+    for( int i=1; i<=nr; i++)
+        cout << (rand() % 6 + 1) <<endl;
+}
 }
 
 int check_progress()//define the progress checking mechanism

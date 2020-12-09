@@ -1,0 +1,15 @@
+1)Declare the game board out of 100
+2)Initialize the function to check game progress
+3)Declare a function to randomly assign value n(1-6) to each player 
+4)Declare player one and computer both starting at value 0
+5)Declare two different variables to save randomly assigned values n in both the computer and player one
+6)Assign board spaces and values to snakes
+7)Assign board spaces and values to ladders 
+8)Store progress in variables for player one and computer 
+9)Loop steps 2-8
+10)Cancel loop after the variable for player one and computer is 100
+11)If player is greater than 100 subtract value just received
+12)If player one wins print “you have one the game”
+13)If computer player wins print “you have lost the game”
+14)Exit      
+

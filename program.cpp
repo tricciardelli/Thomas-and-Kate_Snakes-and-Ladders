@@ -269,7 +269,6 @@ int roll_dice()//define the dice rolling mechanism
     
     dice(number);
     cout<<endl;
-    return 0;
 }
 
 void dice(int nr)

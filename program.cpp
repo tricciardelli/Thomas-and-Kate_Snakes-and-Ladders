@@ -9,6 +9,7 @@ void board();//initialize function to draw the board
 
 int roll_dice();//initialize function to roll dice
 
+int check
 
 int roll; //holds the rolled value for the player
 int computer_roll; //holds the rolled value for computer
@@ -269,11 +270,12 @@ int check_progress();
 {
         //This function is not accurate. Use if...else conditionals for comparing for array i.e squares[100]
         if squares[100] == 200 || squares[100] == 300
-{
+	{
 	return 1; 
-}
-
+	}
+	
 	else 
-{
+	{
 	return 0;
-}} 
+	}
+} 

@@ -200,11 +200,11 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
     }
     while (progress == 0 && input != 0 );
 
-    if (squares[100] == 100)
+    if ( squares[100] == 100)
     {
         cout << "||You Win!||"<<endl;
     }
-    else if (squares[100] == 100)
+    else if ( squares[100] == 100)
     {
         cout << "||Game Over Computer Wins!"<<endl;
     }
@@ -259,15 +259,15 @@ void dice(int nr)
       cout<<(rand() % 6 + 1) <<endl;
 }
 
-int dice_roll(int number)
+int roll_dice(int number)
 {
    return rand() % (7-1) + 1;
 }
 
-int check_progress();
-{
-        //This function is not accurate. Use if...else conditionals for comparing for array i.e squares[100]
-        if squares[100] == 200 || squares[100] == 300
+int check_progress()
+{			
+//This function is not accurate. Use if...else conditionals for comparing for array i.e squares[100]
+	if(  squares[100] == 200 || squares[100] == 300 )
 	{
 	return 1; 
 	}

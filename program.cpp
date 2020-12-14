@@ -37,7 +37,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
 
     for ( int i = 1; i <= 100; i++) // this loop just makes it possible for us to give our squares values
         {
-            //
+            
         }
 
     do 
@@ -182,8 +182,8 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
             computer_alert = "";
         }
 
-        squares[player] = 200; //player's position shall be represented by the integer 200
-        squares[computer] = 300; //computer's position shall be represented by the inteer 300
+        squares[player] = play; //player's position shall be represented by the integer 200
+        squares[computer] = comp; //computer's position shall be represented by the inteer 300
 
         if ( input != 0)
         {

@@ -37,7 +37,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
 
     for ( int i = 1; i <= 100; i++) // this loop just makes it possible for us to give our squares values
         {
-            
+  		squares[i]=i;          
         }
 
     do 
@@ -182,8 +182,8 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
             computer_alert = "";
         }
 
-        squares[player] = play; //player's position shall be represented by the integer 200
-        squares[computer] = comp; //computer's position shall be represented by the inteer 300
+        squares[player] = 200; //player's position shall be represented by the integer 200
+        squares[computer] = 300; //computer's position shall be represented by the inteer 300
 
         if ( input != 0)
         {
@@ -268,7 +268,12 @@ int dice_roll(int number)
 int check_progress();
 {
         //This function is not accurate. Use if...else conditionals for comparing for array i.e squares[100]
-        player = roll + progess; 
-        computer = computer_roll + progress;
-        return 0;
+        if squares[100] == 200 || squares[100] == 300
+{
+	return 1; 
 }
+
+	else 
+{
+	return 0;
+}} 

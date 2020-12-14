@@ -196,7 +196,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
             cout << "SNAKES\tLADDERS\n99-5\t4-36\n93-25\t8-28\n77-9\t20-41\n52-6\t35-67\n30-2\t45-66\n\n"; //so the player knows which is a snake and that which is ladder
         }
 
-        progress = roll + player ;
+        progress = check_progress();
 
     }
     while ( progress == 0 && input != 0 );

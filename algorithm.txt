@@ -9,7 +9,7 @@
 9)Loop steps 2-8
 10)Cancel loop after the variable for player one and computer is 100
 11)If player is greater than 100 subtract value just received
-12)If player one wins print “you have one the game”
+12)If player one wins print “you have won the game”
 13)If computer player wins print “you have lost the game”
 14)Exit      
 

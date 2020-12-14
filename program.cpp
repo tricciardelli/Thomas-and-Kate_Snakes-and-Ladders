@@ -7,12 +7,6 @@ using namespace std;
 
 void board();//initialize function to draw the board
 
-int check_progress();
-{
-	player = roll + progess;
-	computer = computer_roll + progress;
-return 0;
-}
 int roll_dice();//initialize function to roll dice
 
 
@@ -202,16 +196,16 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
             cout << "SNAKES\tLADDERS\n99-5\t4-36\n93-25\t8-28\n77-9\t20-41\n52-6\t35-67\n30-2\t45-66\n\n"; //so the player knows which is a snake and that which is ladder
         }
 
-        progress = //fill;
+        progress = roll + player ;
 
     }
     while ( progress == 0 && input != 0 );
 
-    if ( squares[100] == //fill)
+    if ( squares[100] == 100)
     {
         cout << "||You Win!||"<<endl;
     }
-    else if ( squares[100] == //fill)
+    else if ( squares[100] == 100)
     {
         cout << "||Game Over Computer Wins!"<<endl;
     }
@@ -259,31 +253,29 @@ void board()
     cout << "----------------------------------------------------------------------------"<<endl;
 }
 
-void dice(int nr);
+void dice(int nr)
+{
 
-int roll_dice()//define the dice rolling mechanism
+    for( int i=0; i<=nr; i++)
+      cout<<(rand() % 6 + 1) <<endl;
+}
+
+int dice_roll(int number)
 {
    srand(time(NULL));
 
-    int number;
     
     cout<<"How many times do you want to roll? ";
     cin>>number;
     
     dice(number);
     cout<<endl;
+    return 0;
 }
 
-void dice(int nr)
+int check_progress();
 {
-    for( int i=1; i<=nr; i++)
-        cout<<(rand() % 6 + 1) <<endl;
-}
-}
-
-int check_progress()//define the progress checking mechanism
-{
-   
-   
-   //fill
+        player = roll + progess;
+        computer = computer_roll + progress;
+        return 0;
 }

@@ -262,20 +262,13 @@ void dice(int nr)
 
 int dice_roll(int number)
 {
-   srand(time(NULL));
-
-    
-    cout<<"How many times do you want to roll? ";
-    cin>>number;
-    
-    dice(number);
-    cout<<endl;
-    return 0;
+   return rand() % (7-1) + 1;
 }
 
 int check_progress();
 {
-        player = roll + progess;
+        //This function is not accurate. Use if...else conditionals for comparing for array i.e squares[100]
+        player = roll + progess; 
         computer = computer_roll + progress;
         return 0;
 }

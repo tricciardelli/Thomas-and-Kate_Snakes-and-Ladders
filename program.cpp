@@ -3,13 +3,17 @@
 #include <ctime>
 #include <string>
 
-using namespace std; 
+using namespace std; // so we can use 'cout << "Hello World"<<endl;' in the stead of 'std::cout << "Hello World"<<endl;'
+
+//first let us declare a few neccessary functions
 
 void board();//initialize function to draw the board
 
-int check_progress(); 
+int check_progress();//initialize function to check game progress
 
 int roll_dice();//initialize function to roll dice
+
+//the we declare some variables
 
 int roll; //holds the rolled value for the player
 int computer_roll; //holds the rolled value for computer
@@ -20,9 +24,12 @@ int progress; //holds the value for the progress
 
 int player = 0;
 
-int computer = 0;//both player and computer's initial starting point is 0
+int computer = 0;
+
+//both player and computer's initial starting point is 0
 
 int squares[100]; // for the 100 squares, computers right counts from 0
+
 
 int main() //this is where it all goes down in c++, it's like the canvas for da vinci...
 {
@@ -36,10 +43,10 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
 
     for ( int i = 1; i <= 100; i++) // this loop just makes it possible for us to give our squares values
         {
-  		squares[i]=i;          
+            squares[i] = i;
         }
 
-    do 
+    do // every game is in some sort of loop
     {
         cout << "enter: ";
         cin >> input;
@@ -48,7 +55,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
 
         if( (roll + player) > 100)
         {
-            player = player - roll;
+            player = player; //player has rolled a number that exceeds the end point player remains where they are
         }
         else
         {
@@ -60,7 +67,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
 
         if( (computer_roll + computer) > 100)
         {
-            computer = computer - computer_roll;
+            computer = computer; //computer has rolled a number that exceeds the end point, computer remains where it is
         }
         else
         {
@@ -184,8 +191,8 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
         squares[player] = 200; //player's position shall be represented by the integer 200
         squares[computer] = 300; //computer's position shall be represented by the inteer 300
 
-        if ( input != 0)
-        {
+	if ( input != 0)
+	{
             cout<<"You rolled "<<roll<<" Computer rolled "<<computer_roll<<endl;
             cout<<"Your Position: "<<player<<" Computer's Position: "<<computer<<endl;
             cout <<alert<<endl;
@@ -198,13 +205,13 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
         progress = check_progress();
 
     }
-    while (progress == 0 && input != 0 );
+    while ( progress == 0 && input != 0 );
 
-    if ( squares[100] == 100)
+    if ( squares[100] == 200)
     {
         cout << "||You Win!||"<<endl;
     }
-    else if ( squares[100] == 100)
+    else if ( squares[100] == 300)
     {
         cout << "||Game Over Computer Wins!"<<endl;
     }
@@ -217,7 +224,7 @@ int main() //this is where it all goes down in c++, it's like the canvas for da 
     cin.ignore();
 }
 
-void board()
+void board()//define the board drawing mechanism!
 {
     cout << "----------------------------------------------------------------------------"<<endl<<endl;
          cout << squares[100]<<"\t"<<squares[99]<<"\t"<<squares[98]<<"\t"<<squares[97]<<"\t"<<squares[96]<<"\t"
@@ -252,28 +259,20 @@ void board()
     cout << "----------------------------------------------------------------------------"<<endl;
 }
 
-void dice(int nr)
+int roll_dice()//define the dice rolling mechanism
 {
-
-    for( int i=0; i<=nr; i++)
-      cout<<(rand() % 6 + 1) <<endl;
+    return rand() % (7-1) + 1;
 }
 
-int roll_dice(int number)
+int check_progress()//define the progress checking mechanism
 {
-   return rand() % (7-1) + 1;
+    if ( squares[100] == 200 || squares[100] == 300)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
-int check_progress()
-{			
-//This function is not accurate. Use if...else conditionals for comparing for array i.e squares[100]
-	if(  squares[100] == 200 || squares[100] == 300 )
-	{
-	return 1; 
-	}
-	
-	else 
-	{
-	return 0;
-	}
-} 
